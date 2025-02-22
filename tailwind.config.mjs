@@ -10,6 +10,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        nav: "#18222f",
+        page: "#f5f5f5",
+        card: "#fff",
+        "card-hover": "#f9f9f9",
+        "default-text": "#333",
+        "blue-accent": "#0070f3",
+        "blue-accent-hover": "#0058c7",
       },
     },
   },

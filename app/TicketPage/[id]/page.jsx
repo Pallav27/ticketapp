@@ -1,10 +1,18 @@
-"use client"
-import React from 'react'
+"use client";
+import TicketForm from "@/app/(components)/TicketForm";
+import React from "react";
 
-const TicketPage = ({params}) => {
+const TicketPage = ({ params }) => {
+  // Unwrap the params Promise using React.use()
+  const unwrappedParams = React.use(params);
+
   return (
-    <div className='bg-red-400'>TicketPage {params.id}</div>
-  )
-}
+    
+    <div className="bg-red-400">
+      <TicketForm/>
+      TicketPage {unwrappedParams.id}
+    </div>
+  );
+};
 
-export default TicketPage
+export default TicketPage;
