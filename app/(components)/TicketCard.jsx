@@ -6,7 +6,7 @@ import StatusDisplay from "./StatusDisplay";
 import Link from "next/link";
 
 const TicketCard = ({ ticket }) => {
-  console.log(ticket);
+  //console.log(ticket);
   const formatTimestamp = (timestamp) => {
     const options = {
       year: "numeric",
