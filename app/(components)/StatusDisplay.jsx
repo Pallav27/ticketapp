@@ -1,28 +1,28 @@
 import React from "react";
 
-const StatusDisplay = ({ status }) => {
+const StatusDisplay = ({ status = "" }) => {
   const getColor = (status) => {
-    let color = "bg-slate-700";
+    if (!status) return "bg-slate-700"; // Default color if status is undefined/null
+
     switch (status.toLowerCase()) {
       case "finished":
-        color = "bg-green-500";
-        return color;
+        return "bg-green-500";
       case "started":
-        color = "bg-yellow-200";
-        return color;
+        return "bg-yellow-200";
       case "not started":
-        color = "bg-red-200";
-        return color;
+        return "bg-red-200";
+      default:
+        return "bg-slate-700";
     }
-    return color;
   };
+
   return (
     <span
       className={`inline-block rounded-full px-2 py-1 text-xs font-semibold text-gray-700 ${getColor(
         status
       )}`}
     >
-      {status}
+      {status || "Unknown"}
     </span>
   );
 };
